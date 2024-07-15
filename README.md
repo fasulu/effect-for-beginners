@@ -4,6 +4,7 @@
 
 - install dependencies with your favorite package manager
 - use tsx / ts-node to run the file you want
+- use "npx ts-node src/example-program/1-basic-starting-point/gen.ts" to run the file you want
 
 ### `snippets` contains the snippets from the explanation part of the video
 

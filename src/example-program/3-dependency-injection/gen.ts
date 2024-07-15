@@ -79,7 +79,9 @@ const calculateHeaviestPokemon = (pokemons: Pokemon[]) =>
 
 const program = Effect.gen(function* (_) {
   const arr = yield* _(getRandomNumberArray);
+  yield* _(Effect.log("Time of fetch process started"));
   const pokemons = yield* _(Effect.all(arr.map(getPokemon)));
+  yield* _(Effect.log("Time of fetch process ended"));
   yield* _(Effect.log("\n" + pokemons.map(formatPokemon).join("\n")));
 
   const heaviestResult = yield* _(
